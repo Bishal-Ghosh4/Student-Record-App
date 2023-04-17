@@ -78,9 +78,9 @@ function Text() {
         <div className="form">
                 
             <Stack spacing={8} direction='row'>
-                <TextField required value={name} id="outlined-basic" onChange={(e) => { setName(e.target.value) }} label="Full Name" variant="outlined" />
-                <TextField required value={email} id="outlined-basic" onChange={(e) => { Email(e) }} label="Email" variant="outlined" />
-                <TextField required value={language} id="outlined-basic" onChange={(e) => { setLanguage(e.target.value) }} label="Programming Language" variant="outlined" />
+                <TextField required value={name} id="outlined-basic" onKeyPress={(e)=>{if(e.key ==='Enter'){addData() }}} onChange={(e) => { setName(e.target.value) }} label="Full Name" variant="outlined" />
+                <TextField required value={email} id="outlined-basic" onKeyPress={(e)=>{if(e.key ==='Enter'){addData() }}} onChange={(e) => { Email(e) }} label="Email" variant="outlined" />
+                <TextField required value={language} id="outlined-basic" onKeyPress={(e)=>{if(e.key ==='Enter'){addData() }}} onChange={(e) => { setLanguage(e.target.value) }} label="Programming Language" variant="outlined" />
                 <Button variant="contained" onClick={addData} color='success' size="large">ADD <AddIcon /></Button>
             </Stack>
             <div className="formdata">
